@@ -1,9 +1,9 @@
 //
 //  UIButton+ActivityIndicatorView.h
-//  FishSaying
+//  
 //
 //  Created by aazhou on 13-8-13.
-//  Copyright (c) 2013年 joyotime. All rights reserved.
+//  Copyright (c) 2013 joyotime. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

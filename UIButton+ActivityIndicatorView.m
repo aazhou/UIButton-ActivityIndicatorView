@@ -1,9 +1,9 @@
 //
 //  UIButton+ActivityIndicatorView.m
-//  FishSaying
+//  
 //
 //  Created by aazhou on 13-8-13.
-//  Copyright (c) 2013年 joyotime. All rights reserved.
+//  Copyright (c) 2013 joyotime. All rights reserved.
 //
 
 #import "UIButton+ActivityIndicatorView.h"
@@ -26,9 +26,10 @@ static const char *kOriginalTitlePropertyKey = "kOriginalTitlePropertyKey";
         [self addSubview:indicatorView];
     }
     self.originalTitle = [self titleForState:UIControlStateNormal];
-    [self setTitle:nil forState:UIControlStateNormal];
     self.originalImage = [self imageForState:UIControlStateNormal];
+    [self setTitle:nil forState:UIControlStateNormal];
     [self setImage:nil forState:UIControlStateNormal];
+    [self setEnabled:NO];
     [indicatorView startAnimating];
 }
 
@@ -40,6 +41,7 @@ static const char *kOriginalTitlePropertyKey = "kOriginalTitlePropertyKey";
     }
     [self setTitle:self.originalTitle forState:UIControlStateNormal];
     [self setImage:self.originalImage forState:UIControlStateNormal];
+    [self setEnabled:YES];
 }
 
 #pragma mark - Property
